@@ -10,23 +10,18 @@ public class App
         Set<Book> books = new TreeSet<>();
         for (int i=0;i<5;i++)
         {
-            byte[] array = new byte[7]; // length is bounded by 7
-            random.nextBytes(array);
-            String author = generateString() ;
-            random.nextBytes(array);
-            String name = generateString();
             int pageSize = (int)( Math.random()*1000)+1;
-            books.add(new Book(author,name,pageSize));
+            books.add(new Book(generateString(),generateString(),pageSize));
         }
 
         books.forEach(b -> System.out.println(b.toString()));
-        var list = new ArrayList<Book>(books);
-        list.sort((b1,b2)->{
-            return b1.getPageSize() - b2.getPageSize();
-        });
-        System.out.println("----------------------");
-        list.forEach(b -> System.out.println(b.toString()));
 
+        var list = new ArrayList<Book>(books);
+        list.sort((b1,b2)->{return b1.getPageSize() - b2.getPageSize();});
+
+        System.out.println("-------------------------------");
+
+        list.forEach(b -> System.out.println(b.toString()));
     }
     public static String generateString(){
         int leftLimit = 97; // letter 'a'
