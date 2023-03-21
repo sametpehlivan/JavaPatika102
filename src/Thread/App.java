@@ -9,7 +9,7 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException {
         int n = 4;
-        int capacity = 10000;
+        int capacity = 10002;
         int part = (capacity/n);
         OddEven lists = new OddEven(capacity);
         List<Thread> threads = new ArrayList<>();

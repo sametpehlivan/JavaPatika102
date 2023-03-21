@@ -23,7 +23,7 @@ public class OddEven
     public void evenAdd(int value)
     {
         LOCK1.lock();
-            listEven.add(value);
+        listEven.add(value);
         LOCK1.unlock();
 
     }
@@ -39,7 +39,7 @@ public class OddEven
     }
     public void print()
     {
-        System.out.println("Even Size: " +listEven.size());
-        System.out.println("Odd  Size: " +listOdd.size());
+        System.out.println("Even Size: " + listEven.size());
+        System.out.println("Odd  Size: " + listOdd.size());
     }
 }
