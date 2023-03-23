@@ -118,6 +118,8 @@ public class OperatorGUI extends JFrame
 
             }
             if (!flag) JOptionPane.showMessageDialog(null,messages.toUpperCase(),"ERROR!",JOptionPane.ERROR_MESSAGE);
+            else JOptionPane.showMessageDialog(null,"success","ERROR!",JOptionPane.INFORMATION_MESSAGE);
+
         });
     }
     public OperatorGUI(Operator operator)
@@ -137,7 +139,7 @@ public class OperatorGUI extends JFrame
 
     public static void main(String[] args)
     {
-        var operator = new Operator(1,"samet","pehlivan","sametpehlivan","samet1234");
+        var operator = new Operator(1,"name","surname","username","password");
         Helper.setLayout();
         OperatorGUI gui = new OperatorGUI(operator);
     }
